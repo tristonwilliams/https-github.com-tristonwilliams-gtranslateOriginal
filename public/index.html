@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Custom Content Block</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <script src="/blocksdk.js"></script>
+    <script src="/main.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div id="t1">Well, hello there!</div>
+
+        <form class="form-horizontal">
+            <fieldset>
+
+                <!-- Form Name -->
+                <legend>Configure Translation Properties</legend>
+
+                <!-- Textarea -->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="textMessage">Message</label>
+                    <div class="col-md-4">
+                        <textarea class="form-control" id="textMessage" name="textMessage"></textarea>
+                    </div>
+                </div>
+
+                <!-- Select Basic -->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="fromLang">From</label>
+                    <div class="col-md-4">
+                        <select id="fromLang" name="fromLang" class="form-control">
+                            <option value="auto">Auto</option>
+                            <option value="en">English</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Select Basic -->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="toLang">To</label>
+                    <div class="col-md-4">
+                        <select id="toLang" name="toLang" class="form-control">
+                            <option value="EN">English</option>
+                            <option value="DE">German</option>
+                        </select>
+                    </div>
+                </div>
+
+            </fieldset>
+        </form>
+
+    </div>
+
+</body>
+
+</html>
