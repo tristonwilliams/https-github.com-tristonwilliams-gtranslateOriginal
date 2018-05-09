@@ -4,9 +4,9 @@ let sdk = new window.sfdc.BlockSDK(); //initalize SDK
 let defaultContent = `<h1>This is the defualt content</h1>`;
 
 let data = {
-    textMessage: '',
+    textMessage: 'Hello world!',
     fromLang: 'auto',
-    toLang: 'en'
+    toLang: 'auto'
 };
 
 let saveData = () => {
@@ -28,6 +28,7 @@ let saveData = () => {
 
         sdk.setData(data, (updatedData) => {
             let content = xhttp.responseText;
+            data.text = content;
             sdk.setContent(content);
         });
     }
@@ -41,12 +42,14 @@ let fetchData = () => {
         if (Object.keys(dataCB).length > 0) {
             data = dataCB;
 
-            document.getElementById('textMessage').value = data.text;
-            document.getElementById('fromLang').value = data.from;
-            document.getElementById('toLang').value = data.to;
+            document.getElementById('textMessage').value = data.textMessage;
+            document.getElementById('fromLang').value = data.fromLang;
+            document.getElementById('toLang').value = data.toLang;
 
-            // console.log('Found data!');
+            console.log('Found data!');
         }
+
+
     });
 
 
