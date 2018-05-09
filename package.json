@@ -1,0 +1,26 @@
+{
+    "name": "sfmc-custom-content-block",
+    "version": "0.0.1",
+    "description": "Boilerplate for Custom Content Blocks",
+    "main": "index.js",
+    "scripts": {
+        "start": "node index.js",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/dpkjhn/sfmc-custom-content-block.git"
+    },
+    "keywords": [
+        "salesforce"
+    ],
+    "author": "Deepak John",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/dpkjhn/sfmc-custom-content-block/issues"
+    },
+    "homepage": "https://github.com/dpkjhn/sfmc-custom-content-block#readme",
+    "dependencies": {
+        "express": "^4.16.3"
+    }
+}
