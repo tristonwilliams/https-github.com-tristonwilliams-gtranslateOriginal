@@ -10,7 +10,7 @@ let data = {
 };
 
 let saveData = () => {
-    console.log('Saving data...');
+    // console.log('Saving data...');
 
     data.textMessage = document.getElementById('textMessage').value;
     data.fromLang = document.getElementById('fromLang').value;
@@ -37,8 +37,8 @@ let saveData = () => {
 let fetchData = () => {
     console.log('Loading data...');
 
-    sdk.getData((data) => {
-        if (Object.keys(data).length > 0) {
+    sdk.getData((dataCB) => {
+        if (Object.keys(dataCB).length > 0) {
 
             document.getElementById('textMessage').value = data.text;
             document.getElementById('fromLang').value = data.from;
