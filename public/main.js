@@ -39,6 +39,7 @@ let fetchData = () => {
 
     sdk.getData((dataCB) => {
         if (Object.keys(dataCB).length > 0) {
+            data = dataCB;
 
             document.getElementById('textMessage').value = data.text;
             document.getElementById('fromLang').value = data.from;
