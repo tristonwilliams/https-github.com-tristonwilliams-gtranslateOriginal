@@ -23,12 +23,11 @@ let saveData = () => {
     xhttp.send(`text=${data.textMessage}&from=${data.fromLang}&to=${data.toLang}`);
 
     xhttp.onreadystatechange = () => {
-        console.log('response -> ' + xhttp.responseText);
+        // console.log('response -> ' + xhttp.responseText);
         // document.getElementById('t1').innerText = xhttp.responseText;
 
         sdk.setData(data, (updatedData) => {
             let content = xhttp.responseText;
-            data.text = content;
             sdk.setContent(content);
         });
     }
@@ -36,7 +35,7 @@ let saveData = () => {
 }
 
 let fetchData = () => {
-    console.log('Loading data...');
+    // console.log('Loading data...');
 
     sdk.getData((dataCB) => {
         if (Object.keys(dataCB).length > 0) {
@@ -46,7 +45,7 @@ let fetchData = () => {
             document.getElementById('fromLang').value = data.fromLang;
             document.getElementById('toLang').value = data.toLang;
 
-            console.log('Found data!');
+            // console.log('Found data!');
         }
 
 
