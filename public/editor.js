@@ -47,10 +47,10 @@ let quill = new Quill('#editor-container', {
     theme: 'snow' // or 'bubble'
 });
 
-let getHtmlText = () => {
+let getEditorFormattedText = () => {
     return quill.root.innerHTML;
 }
 
-let setHtmlText = (htmlText) => {
+let setEditorFormattedText = (htmlText) => {
     quill.root.innerHTML = htmlText;
 }

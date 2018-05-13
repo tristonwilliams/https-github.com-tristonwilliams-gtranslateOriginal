@@ -5,6 +5,7 @@ const gtrans = require('google-translate-api');
 
 let translate = async(msg, from, to) => {
     console.log(`"${msg}" ${from} --> ${to}`);
+    return;
 
     return gtrans(msg, {
         from: from,

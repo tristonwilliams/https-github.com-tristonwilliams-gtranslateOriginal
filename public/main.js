@@ -5,7 +5,7 @@ let sdk = new window.sfdc.BlockSDK(); //initalize SDK
 let defaultContent = `<h1>This is the defualt content</h1>`;
 
 let data = {
-    textMessage: 'Hello world!',
+    textMessage: '<h1>Hello world!</h1>',
     fromLang: 'auto',
     toLang: 'auto'
 };
@@ -13,7 +13,8 @@ let data = {
 let saveData = () => {
     // console.log('Saving data...');
 
-    data.textMessage = document.getElementById('editor-container').innerHTML;
+    // data.textMessage = document.getElementById('editor-container').innerHTML;
+    data.textMessage = getEditorFormattedText();
     data.fromLang = document.getElementById('fromLang').value;
     data.toLang = document.getElementById('toLang').value;
 
@@ -42,7 +43,8 @@ let fetchData = () => {
         if (Object.keys(dataCB).length > 0) {
             data = dataCB;
 
-            document.getElementById('editor-container').innerHTML = data.textMessage;
+            // document.getElementById('editor-container').innerHTML = data.textMessage;
+            setEditorFormattedText(data.textMessage);
             document.getElementById('fromLang').value = data.fromLang;
             document.getElementById('toLang').value = data.toLang;
 
@@ -54,8 +56,6 @@ let fetchData = () => {
 
 
 }
-
-
 
 // Event Handlers
 window.onload = fetchData;
