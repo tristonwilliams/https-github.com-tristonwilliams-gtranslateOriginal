@@ -13,7 +13,7 @@ let data = {
 let saveData = () => {
     // console.log('Saving data...');
 
-    data.textMessage = document.getElementById('textMessage').innerHTML;
+    data.textMessage = document.getElementById('editor-container').innerHTML;
     data.fromLang = document.getElementById('fromLang').value;
     data.toLang = document.getElementById('toLang').value;
 
@@ -42,7 +42,7 @@ let fetchData = () => {
         if (Object.keys(dataCB).length > 0) {
             data = dataCB;
 
-            document.getElementById('textMessage').innerHTML = data.textMessage;
+            document.getElementById('editor-container').innerHTML = data.textMessage;
             document.getElementById('fromLang').value = data.fromLang;
             document.getElementById('toLang').value = data.toLang;
 
