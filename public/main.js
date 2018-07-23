@@ -26,7 +26,7 @@ let saveData = () => {
     data.toLang = document.getElementById('toLang').value;
 
     let xhttp = new XMLHttpRequest();
-
+alert(data.editor);
     xhttp.open('POST', '/translate', true);
     xhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
     xhttp.send(`text=${data.editor}&from=${data.fromLang}&to=${data.toLang}`);
