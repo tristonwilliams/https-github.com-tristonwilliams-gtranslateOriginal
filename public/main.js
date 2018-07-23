@@ -4,7 +4,7 @@ let sdk = new window.sfdc.BlockSDK(); //initalize SDK
 let defaultContent = `<h1>This is the defualt content</h1>`;
 
 let data = {
-    textMessage: 'Hello world!',
+    editor: 'Hello world!',
     fromLang: 'auto',
     toLang: 'auto'
 };
@@ -12,7 +12,7 @@ let data = {
 let saveData = () => {
     // console.log('Saving data...');
 
-    data.textMessage = document.getElementById('textMessage').value;
+    data.editor = document.getElementById('editor').value;
     data.fromLang = document.getElementById('fromLang').value;
     data.toLang = document.getElementById('toLang').value;
 
@@ -20,7 +20,7 @@ let saveData = () => {
 
     xhttp.open('POST', '/translate', true);
     xhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-    xhttp.send(`text=${data.textMessage}&from=${data.fromLang}&to=${data.toLang}`);
+    xhttp.send(`text=${data.editor}&from=${data.fromLang}&to=${data.toLang}`);
 
     xhttp.onreadystatechange = () => {
         // console.log('response -> ' + xhttp.responseText);
@@ -41,7 +41,7 @@ let fetchData = () => {
         if (Object.keys(dataCB).length > 0) {
             data = dataCB;
 
-            document.getElementById('textMessage').value = data.textMessage;
+            document.getElementById('editor').value = data.editor;
             document.getElementById('fromLang').value = data.fromLang;
             document.getElementById('toLang').value = data.toLang;
 
