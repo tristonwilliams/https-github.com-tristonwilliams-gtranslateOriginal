@@ -9,10 +9,19 @@ let data = {
     toLang: 'auto'
 };
 
+ 
+	//var quill = new Quill('#editor', {
+	  //theme: 'snow'
+	//});
+
+
+	
+
+
 let saveData = () => {
     // console.log('Saving data...');
 
-    data.editor = document.getElementById('editor').value;
+    data.editor = quill.root.innerHTML;
     data.fromLang = document.getElementById('fromLang').value;
     data.toLang = document.getElementById('toLang').value;
 
@@ -41,7 +50,7 @@ let fetchData = () => {
         if (Object.keys(dataCB).length > 0) {
             data = dataCB;
 
-            document.getElementById('editor').value = data.editor;
+quill.root.innerHTML = data.editor;
             document.getElementById('fromLang').value = data.fromLang;
             document.getElementById('toLang').value = data.toLang;
 
