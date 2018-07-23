@@ -21,7 +21,7 @@ let data = {
 let saveData = () => {
     // console.log('Saving data...');
 
-    data.editor = quill.getText;
+    data.editor = quill.getText(0, 10);;
     data.fromLang = document.getElementById('fromLang').value;
     data.toLang = document.getElementById('toLang').value;
 
