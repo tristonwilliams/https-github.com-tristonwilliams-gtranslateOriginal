@@ -56,7 +56,7 @@ let fetchData = () => {
         if (Object.keys(dataCB).length > 0) {
             data = dataCB;
 
-		quill.setText(data.styled);
+		quill.setText() = data.styled;
 //document.getElementById('editor').value = data.styled;
 		//quill.getContents() = data.editor;
             document.getElementById('fromLang').value = data.fromLang;
