@@ -6,7 +6,8 @@ let defaultContent = `<h1>This is the defualt content</h1>`;
 let data = {
     editor: 'Hello world!',
     fromLang: 'auto',
-    toLang: 'auto'
+    toLang: 'auto',
+	styled:  ''
 };
 
  
@@ -25,7 +26,7 @@ let saveData = () => {
     
 	
 	data.editor = text.textContent;
-	    
+	    data.styled = quill.root.innerHTML
 	   
     data.fromLang = document.getElementById('fromLang').value;
     data.toLang = document.getElementById('toLang').value;
@@ -55,7 +56,7 @@ let fetchData = () => {
         if (Object.keys(dataCB).length > 0) {
             data = dataCB;
 
-quill.root.innerHTML = data.editor;
+quill.root.innerHTML = data.styled;
             document.getElementById('fromLang').value = data.fromLang;
             document.getElementById('toLang').value = data.toLang;
 
