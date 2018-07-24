@@ -26,7 +26,7 @@ let saveData = () => {
     
 	
 	data.editor = text.textContent;
-	   data.styled = quill.getContents();
+	 //  data.styled = quill.getContents();
 	   
     data.fromLang = document.getElementById('fromLang').value;
     data.toLang = document.getElementById('toLang').value;
@@ -57,7 +57,7 @@ let fetchData = () => {
             data = dataCB;
 
 //quill.getContents() = data.styled;
-		quill.getContents() = data.editor;
+		//quill.getContents() = data.editor;
             document.getElementById('fromLang').value = data.fromLang;
             document.getElementById('toLang').value = data.toLang;
 
