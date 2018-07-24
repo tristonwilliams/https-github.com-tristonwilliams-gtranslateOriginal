@@ -21,7 +21,12 @@ let data = {
 let saveData = () => {
     // console.log('Saving data...');
 
-    data.editor = document.getElementById('editor').value;
+    var text = document.getElementById('editor')
+    
+	
+	data.editor = text.textContent;
+	    
+	   
     data.fromLang = document.getElementById('fromLang').value;
     data.toLang = document.getElementById('toLang').value;
 
